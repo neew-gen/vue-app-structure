@@ -14,10 +14,6 @@
     │       └── shared
     │           └── file-storage.apis.ts
     ├── App.vue
-    ├── assets
-    │   └── styles
-    │       ├── shared.scss
-    │       └── tailwind.scss
     ├── components
     │   ├── auth
     │   │   └── shared
@@ -57,14 +53,18 @@
     │           ├── WrapperContent.vue
     │           └── WrapperHeader.vue
     ├── libs
+    │   ├── assets
+    │   │   └── styles
+    │   │       ├── shared.scss
+    │   │       └── tailwind.scss
     │   ├── classes
     │   │   ├── auth
     │   │   │   └── auth-lib.ts
     │   │   └── default
     │   │       └── default-lib.ts
     │   ├── composables
-    │   │   ├── toaster.composable.ts
-    │   │   └── window-size.composable.ts
+    │   │   ├── use-toaster.ts
+    │   │   └── use-window-size.ts
     │   ├── configs
     │   │   └── app.config.ts
     │   ├── constants
@@ -76,6 +76,16 @@
     │   │   └── window-size.enum
     │   ├── inits
     │   │   └── sentry.init.ts
+    │   ├── router
+    │   │   ├── guards
+    │   │   │   └── auth.guard.ts
+    │   │   ├── router.ts
+    │   │   └── routes
+    │   │       ├── auth
+    │   │       │   └── auth.routes.ts
+    │   │       ├── default
+    │   │       │   └── default.routes.ts
+    │   │       └── routes.ts
     │   ├── stores
     │   │   ├── auth.store.ts
     │   │   └── pinia.ts
@@ -88,26 +98,16 @@
     │       └── shared
     │           └── shared.type.ts
     ├── main.ts
-    ├── pages
-    │   ├── auth
-    │   │   ├── AuthLogin.vue
-    │   │   ├── AuthPasswordRecovery.vue
-    │   │   └── AuthRegister.vue
-    │   └── default
-    │       ├── Home.vue
-    │       └── Profile
-    │           ├── Profile.vue
-    │           ├── ProfileHistory.vue
-    │           └── ProfileSettings.vue
-    └── router
-        ├── guards
-        │   └── auth.guard.ts
-        ├── router.ts
-        └── routes
-            ├── auth
-            │   └── auth.routes.ts
-            ├── default
-            │   └── default.routes.ts
-            └── routes.ts
+    └── pages
+        ├── auth
+        │   ├── AuthLogin.vue
+        │   ├── AuthPasswordRecovery.vue
+        │   └── AuthRegister.vue
+        └── default
+            ├── Home.vue
+            └── Profile
+                ├── Profile.vue
+                ├── ProfileHistory.vue
+                └── ProfileSettings.vue
 
 52 directories, 59 files
